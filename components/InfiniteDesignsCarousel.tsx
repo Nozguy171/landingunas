@@ -9,7 +9,7 @@ interface InfiniteDesignsCarouselProps {
 export default function InfiniteDesignsCarousel({ designs }: InfiniteDesignsCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [isPaused, setIsPaused] = useState(false)
-  const animationRef = useRef<number>()
+const animationRef = useRef<number | null>(null)
   const positionRef = useRef(0)
 
   useEffect(() => {
